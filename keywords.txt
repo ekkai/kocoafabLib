@@ -1,0 +1,34 @@
+#######################################
+# Syntax Coloring Map For Kocoafab
+#######################################
+# Library (KEYWORD1)
+#######################################
+
+Kocoafab_SmartMobility	KEYWORD1	Kocoafab_SmartMobility
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+moveF	KEYWORD2
+moveL	KEYWORD2
+moveR	KEYWORD2
+moveB	KEYWORD2
+moveLF	KEYWORD2
+moveRF	KEYWORD2
+moveLB	KEYWORD2
+moveRB	KEYWORD2
+stopAll	KEYWORD2
+setMove	KEYWORD2
+setSpeed	KEYWORD2
+setMotor	KEYWORD2
+rotate	KEYWORD2
+drawRect	KEYWORD2
+drawTriangle	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+CW	LITERAL1
+CCW	LITERAL1
