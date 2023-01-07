@@ -7,7 +7,7 @@ int trig = 2;
 int echo = 3;
 
 // 피에조 부저 핀 번호
-int piezo = 7;
+int piezo = 8;
 
 void setup() {
   Serial.begin(9600);
