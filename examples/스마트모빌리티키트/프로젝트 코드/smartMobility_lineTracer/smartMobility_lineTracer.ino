@@ -15,8 +15,8 @@ int leftVal;
 int rightVal;
 
 //  LED 2개 pin 번호 설정
-int leftLED = 5;
-int rightLED = 10;
+int leftLED = 6;
+int rightLED = 11;
 
 void setup() {
   Serial.begin(9600);
@@ -38,17 +38,17 @@ void loop() {
   leftVal = analogRead(leftLine);
   rightVal = analogRead(rightLine);
     
-  // 두 센서 모두 라인이 인식되면
+  // 두 센서 모두 검정색을 인식하면
   if (leftVal > level && rightVal > level) {
-    // 정지
-    sm.moveTo(5);
+    // 전진
+    sm.moveTo(2);
 
     // LED 소등
     digitalWrite(leftLED, LOW);
     digitalWrite(rightLED, LOW);
   }
 
-  // 왼쪽에 라인이 인식되면
+  // 오른쪽센서에 흰색을 인식하면
   else if (leftVal > level && rightVal < level) {
     // 왼쪽(반시계방향) 회전
     sm.rotate(CCW);
@@ -58,7 +58,7 @@ void loop() {
     digitalWrite(rightLED, LOW);
   }
 
-  // 오른쪽에 라인이 인식되면
+  // 왼쪽센서에 흰색을 인식하면
   else if (leftVal < level && rightVal > level) {
     // 오른쪽(시계방향) 회전
     sm.rotate(CW);
@@ -68,10 +68,10 @@ void loop() {
     digitalWrite(rightLED, HIGH);
   }
 
-  // 라인이 인식되지 않으면
+  // 둘 다 흰색 라인을 인식하면
   else if (leftVal < level && rightVal < level) {
-    // 전진
-    sm.moveTo(2);
+    // 정지
+    sm.moveTo(5);
 
     // LED 모두 소등
     digitalWrite(leftLED, LOW);
